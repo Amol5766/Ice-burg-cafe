@@ -97,8 +97,8 @@ function Navbar() {
     if (navigator.share) {
       try {
         await navigator.share({
-          title: 'Fresh & More',
-          text: 'Check out Fresh & More!',
+          title: 'Ice-Burg Cafe',
+          text: 'Check out Ice-Burg Cafe!',
           url: window.location.href,
         });
         console.log('Shared successfully');
