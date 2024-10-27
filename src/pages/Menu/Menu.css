@@ -1,0 +1,529 @@
+/* Base Styles */
+.menu-page {
+    padding: 20px;
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-align: center;
+    animation: fadeIn 1s ease; /* Fade-in animation for header */
+}
+
+/* Icon Buttons Container */
+.icon-buttons-wrapper {
+    margin-bottom: 30px; /* Space below the icon buttons */
+}
+
+/* Menu Categories */
+.menu-category-1, .menu-category-2, .menu-category-3, .menu-category-4, .menu-category-5, .menu-category-6, 
+.menu-category-7, .menu-category-8, .menu-category-9, .menu-category-10, .menu-category-11, .menu-category-12
+ {
+    margin-bottom: 30px; 
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.menu-category-1.visible, .menu-category-2.visible, .menu-category-3.visible, .menu-category-4.visible, 
+.menu-category-5.visible, .menu-category-6.visible, .menu-category-7.visible, .menu-category-8.visible, 
+.menu-category-9.visible, .menu-category-10.visible, .menu-category-11.visible, .menu-category-12.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Menu Category Title Animation */
+.menu-category h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+    animation: slideIn 0.5s forwards; /* Slide-in animation */
+}
+
+.menu-category-1 h2:hover,
+.menu-category-2 h2:hover,
+.menu-category-3 h2:hover,
+.menu-category-4 h2:hover,
+.menu-category-5 h2:hover,
+.menu-category-6 h2:hover,
+.menu-category-7 h2:hover,
+.menu-category-8 h2:hover,
+.menu-category-9 h2:hover,
+.menu-category-10 h2:hover,
+.menu-category-11 h2:hover,
+.menu-category-12 h2:hover {
+    color: #c63131d7; /* Hover color for categories */
+    transform: scale(1.1); /* Scale effect on hover */
+}
+
+/* Menu Items Styles */
+.menu-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Spread items evenly */
+    padding: 10px;
+}
+
+.menu-item {
+    background-color: #fff;
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.2);
+    margin: 10px; /* Adjust margin to control spacing */
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow transition */
+    flex: 1 1 calc(23% - 20px); /* Allow four items to fit in a row */
+    max-width: calc(23% - 20px); /* Ensure max-width is set for larger screens */
+    animation: fadeInUp 0.5s ease-out forwards; /* Fade-up animation for items */
+}
+
+.menu-item:hover {
+    transform: scale(1.05) translateY(-10px);
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.menu-item img {
+    width: 100%;
+    height: auto;
+    position:absolute;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.menu-item-image {
+    border-radius: 4px;
+}
+
+.menu-price {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Bestselling Item Emoji Size */
+.menu-item h2 span.bestseller {
+    font-size: 1.5rem; /* Increase the size of the bestseller emoji */
+}
+
+/* Light Theme */
+html.light, body.light {
+    background-color: #f0f0f0;
+    color: #000;
+}
+
+.menu-item {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Dark Theme */
+html.dark, body.dark {
+    background-color: #121212;
+    color: #fff;
+}
+
+.menu-item {
+    background-color: #1e1e1e;
+    color: #fff;
+}
+
+/* Icon Circles */
+.menu-item h2 span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    border-radius: 50%;
+    margin-right: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.menu-item h2 span span {
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .menu-items {
+        justify-content: space-between; /* Spread items evenly */
+    }
+
+    .menu-item {
+        flex: 1 1 calc(45% - 20px); /* Adjust width for smaller screens */
+        max-width: calc(45% - 20px);
+    }
+}
+
+@media (max-width: 660px) {
+    .menu-items {
+        justify-content: center; /* Center items on very small screens */
+    }
+
+    .menu-item {
+        flex: 1 1 calc(90% - 20px); /* Make each item full width on small screens */
+        max-width: calc(90% - 20px);
+    }
+}
+
+@media (min-width: 769px) {
+    .menu-item {
+        flex: 1 1 calc(23% - 20px); /* Allow 4 items in larger screens */
+    }
+}
+
+@media (min-width: 1024px) {
+    .menu-item {
+        flex: 1 1 calc(20% - 20px); /* Keep 5 items in even larger screens */
+    }
+}
+
+/* Fixed Dropdown Button Styles */
+.fixed-menu-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #EB3535;
+    color: #fff;
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    z-index: 100;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Added transform transition */
+}
+
+.fixed-menu-button:hover {
+    background-color: #d42a2a;
+    transform: scale(1.1); /* Scale effect on hover */
+}
+
+.dropdown-menu {
+    position: fixed;
+    bottom: 90px;
+    right: -0px;
+    width: 80%;
+    height: 20%;
+    background-color: #8ad7ef;
+    border: 4px solid hsl(260, 100%, 70%);
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    font: bolder;
+    font-size: 130%;
+    font-family:'Times New Roman', Times, serif;
+    z-index: 1000;
+    padding: 10px;
+    animation: slideIn 0.5s ease; /* Slide-in animation for dropdown */
+}
+
+.dropdown-item {
+  padding: 10px 15px; /* Add some padding for better spacing */
+  border-bottom: 3px dashed #f06b6b; /* Dotted line after each item */
+  cursor: pointer;
+}
+
+.dropdown-item:last-child {
+  border-bottom: none; /* Remove the line for the last item */
+}
+
+.dropdown-item:hover {
+  background-color: #f0f0f0; /* Optional: Highlight on hover */
+}
+
+
+.dropdown-menu div {
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-menu div:hover {
+    background-color: #f01818;
+}
+
+/* Background Image and Menu Section Styles */
+.image-container {
+    position: absolute;
+    width: 100%;
+    height: 200px; /* Adjust as needed */
+    overflow: hidden;
+}
+  
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the container */
+    z-index: -1; /* Make sure the image stays behind the buttons */
+}
+  
+/* Ensure the menu title is above the background image */
+.menu-category-1, .menu-category-2, .menu-category-3, .menu-category-4, .menu-category-5, .menu-category-6, 
+.menu-category-7, .menu-category-8, .menu-category-9, .menu-category-10, .menu-category-11, .menu-category-12
+ {
+    position: relative; /* Ensure it is above the image */
+    z-index: 1;
+    border-color: #934def;
+    padding: 20px 0; /* Add some padding */
+    background-color: #00bbd423; /* Optional: Add a white background with some transparency */
+    border-radius: 8px; /* Optional: Round the corners */
+}
+
+.menu-page {
+    position: relative;
+    overflow: hidden; /* Ensures no overflow from the video */
+}
+  
+/* Hero Video Container with Contrast Shadow */
+.hero-video-container {
+  position: relative;
+  margin-top: 1%;
+  margin-bottom: 5%;
+  width: 110%;
+  margin-left: -5%;
+  height: 450px;
+  overflow: hidden;
+  border-end-end-radius: 20%;
+  border-end-start-radius: 20%;
+  box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.8); /* Added high contrast shadow */
+}
+
+.hero-video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-title {
+  position: absolute;
+  top: 370px;
+  left: 140px;
+  color: white;
+  font-size: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow for readability */
+}
+
+.visible {
+    display: block; /* Or flex, depending on your layout */
+}
+
+/* Icon Buttons Container Styles */
+
+
+.icon-buttons-wrapper {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+    
+  }
+  
+  .icon-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .icon-button:hover {
+    transform: scale(1.1);
+  }
+  
+  .icon-button span {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    font:bolder;
+    color: #00b3bd; /* Adjust color based on theme */
+  }
+  
+  .icon-button .bestseller-icon {
+    font-size: 30px; /* Ensures the same size as the other icons */
+    display: inline-block;
+    
+  }
+
+  .categories-header {
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
+    margin: 30px 0;
+    position: relative;
+    animation: pulseGlow 2s infinite;
+  }
+  
+  .categories-header h2 {
+    font-size: 3rem;
+    background: linear-gradient(45deg, #47e8f6, #0575e6);
+
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    letter-spacing: 3px;
+    position: relative;
+  }
+  
+  .categories-header h2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100px;
+    height: 4px;
+    background-color: #00f260;
+    transform: translateX(-50%);
+    border-radius: 50px;
+    animation: slideIn 2s infinite;
+  }
+  
+  .categories-header h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 100px;
+    height: 4px;
+    background-color: #0575e6;
+    transform: translateX(-50%);
+    border-radius: 50px;
+    animation: slideInReverse 2s infinite;
+  }
+  
+  @keyframes pulseGlow {
+    0% {
+      text-shadow: 0 0 10px rgba(0, 242, 96, 0.7), 0 0 20px rgba(5, 117, 230, 0.7);
+    }
+    50% {
+      text-shadow: 0 0 30px rgba(0, 242, 96, 1), 0 0 40px rgba(5, 117, 230, 1);
+    }
+    100% {
+      text-shadow: 0 0 10px rgba(0, 242, 96, 0.7), 0 0 20px rgba(5, 117, 230, 0.7);
+    }
+  }
+  
+  @keyframes slideIn {
+    0%, 100% {
+      width: 100px;
+    }
+    50% {
+      width: 150px;
+    }
+  }
+  
+  @keyframes slideInReverse {
+    0%, 100% {
+      width: 100px;
+    }
+    50% {
+      width: 150px;
+    }
+  }
+   /* Infinite horizontal slider */
+   .infinite-slider-wrapper {
+    overflow: hidden;
+    width: 100%;
+    margin: 20px 0;
+  }
+  
+  .infinite-slider {
+    display: flex;
+    justify-content: space-around;
+    animation: scroll 8s linear infinite;
+    width: max-content;
+  }
+  
+  .icon-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    font-size: 26px;
+  }
+  
+  @keyframes scroll {
+    100% { transform: translateX(0%); }
+    40% { transform: translateX(100%); }
+  }
+  
+
+ 
+@media (max-width: 768px) {           
+  /* Infinite horizontal slider */
+  .infinite-slider-wrapper {
+    overflow: hidden;
+    width: 100%;
+    margin: 20px 0;
+  }
+  
+  .infinite-slider {
+    display: flex;
+    justify-content: space-around;
+    animation: scroll 20s linear infinite;
+    width: max-content;
+  }
+  
+  .icon-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    font-size: 26px;
+  }
+  
+  @keyframes scroll {
+    0% { transform: translateX(90%); }
+    100% { transform: translateX(-95%); }
+  }
+  }
+
+.scrollable-dropdown {
+  max-height: 200px; /* Adjust based on design */
+  overflow-y: auto;
+  scrollbar-width: auto; /* For Firefox */
+  scrollbar-color: #ec2828 transparent; /* For Firefox */
+  border-radius: 10%;
+}
+
+/* Webkit Scrollbar styles */
+.scrollable-dropdown::-webkit-scrollbar {
+  width: 8px;
+  border-radius: 10%;
+}
+
+.scrollable-dropdown::-webkit-scrollbar-thumb {
+  background-color: #888; /* Scrollbar color */
+  border-radius: 10px;
+  animation: pulseScrollbar 3.5s infinite; /* Pulse animation */
+  border-radius: 50%;
+}
+
+.scrollable-dropdown::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Color on hover */
+}
+
+/* Pulse animation to indicate scrolling */
+@keyframes pulseScrollbar {
+  0% {
+    background-color: #fbfbfb;
+  }
+  50% {
+    background-color: #ff0000;
+  }
+  100% {
+    background-color: #000000;
+  }
+}

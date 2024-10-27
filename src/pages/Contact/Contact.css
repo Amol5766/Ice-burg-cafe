@@ -1,0 +1,247 @@
+ /* Container Styling */
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 30px;
+    margin-top: 0%;
+    background: linear-gradient(235deg, #ff7f50, #695acd00, #20b2aa, #ff69b400);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    min-height: 100vh; /* Ensures the background covers the entire viewport */
+  }
+  
+  /* Gradient Animation */
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+
+
+  /* Contact Info Styling */
+  .contact-info {
+    background: radial-gradient(circle at 50%, #1f1f1f, #0a0a0a);
+    padding: 20px;
+    border-radius: 20px;
+    border: 2px solid #00ffff;
+    width: 450px;
+    margin-top: 8%;
+    text-align: center;
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
+    transform: perspective(1000px) rotateY(10deg);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .contact-info h2 {
+    font-size: 26px;
+    color: #00ffff;
+    margin-bottom: 15px;
+  }
+  
+  .contact-info p {
+    margin: 15px 0;
+    color: #c0f8ff;
+    font-size: 18px;
+  }
+  
+  .contact-info i {
+    color: #00ffff;
+    margin-right: 8px;
+  }
+  
+  .contact-info:hover {
+    transform: perspective(1000px) rotateY(0deg) scale(1.05);
+    box-shadow: 0 0 40px rgba(0, 255, 255, 0.8);
+  }
+  
+  /* Contact Form Styling */
+  .contact-form {
+    background: linear-gradient(145deg, #2a2a2a, #1c1c1c);
+    border: 2px solid #ff00ff;
+    border-radius: 20px;
+    padding: 40px;
+    width: 450px;
+    box-shadow: 0 0 25px rgba(255, 0, 255, 0.6);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .contact-form:hover {
+    transform: scale(1.03);
+  }
+  
+  .H2 {
+    font-size: 24px;
+    color: #ff00ff;
+    margin-bottom: 20px;
+  }
+  
+  .input-group {
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    padding: 12px 20px;
+    background-color: #1c1c1c;
+    border: none;
+    outline: none;
+    color: #ff00ff;
+    border-radius: 10px;
+    font-size: 16px;
+    box-shadow: 0 0 10px rgba(255, 0, 255, 0.3);
+    transition: all 0.3s ease;
+  }
+  
+  input:focus,
+  textarea:focus {
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.6);
+  }
+  
+  textarea {
+    resize: none;
+    height: 120px;
+  }
+  
+  .submit-btn {
+    background-color: #ff00ff;
+    color: #fff;
+    border: none;
+    padding: 12px 40px;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.6);
+  }
+  
+  .submit-btn:hover {
+    background-color: #ff33ff;
+    box-shadow: 0 0 40px rgba(255, 0, 255, 0.9);
+  }
+  
+  /* Google Map Container */
+  .map-container {
+    width: 100%;
+    max-width: 900px;
+    height: 400px;
+    border: 3px solid #00ffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.6);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .map-container:hover {
+    transform: scale(1.05);
+  }
+  
+  .google-map {
+    width: 100%;
+    height: 100%;
+    border: none;
+    transition: all 0.3s ease;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+  
+    .map-container {
+      max-width: 100%;
+    }
+  }
+  
+  /* Responsive Styles */
+@media (max-width: 768px) {
+    .contact-container {
+      flex-direction: column;
+      gap: 20px; /* Reduced gap for mobile screens */
+    }
+  
+    .contact-info, .contact-form {
+      width: 90%;
+      padding: 20px; /* Decrease padding for mobile screens */
+    }
+  
+    .contact-form {
+      padding: 20px; /* Reduce padding inside the form */
+    }
+  
+    .input-group {
+      margin-bottom: 10px; /* Reduced margin between input fields */
+    }
+  
+    input,
+    textarea {
+      padding: 10px 15px; /* Decrease padding inside inputs and textarea */
+      font-size: 18px; /* Decrease font size for mobile */
+    }
+  
+    textarea {
+      height: 100px; /* Reduce height of the textarea on mobile */
+    }
+  
+    .submit-btn {
+      padding: 10px 30px; /* Reduce button padding */
+    }
+  
+    .map-container {
+      max-width: 100%;
+      height: 380px; /* Reduce height for the map */
+    }
+  }
+
+  @media (max-width: 768px) {
+    .contact-container {
+      flex-direction: column;
+      gap: 30px;
+      margin-top: 10%;
+    }
+  
+    .contact-info, .contact-form, .model-container {
+      width: 90%;
+    }
+  }
+  
+
+*/ this was taken again from gpt */
+
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .contact-info {
+    margin-bottom: 40px; /* Space between contact info and model */
+  }
+  
+  .model-container {
+    margin-bottom: 40px; /* Space between model and contact form */
+    width: 100%; /* Ensure the model fits well */
+    height: 400px; /* Adjust height as necessary */
+    position: relative; /* To control absolute positioning if needed */
+  }
+  
+  .contact-form {
+    width: 100%;
+    max-width: 600px; /* Center the form */
+  }
+  
+  .input-group {
+    margin-bottom: 20px; /* Space between input fields */
+  }
+  

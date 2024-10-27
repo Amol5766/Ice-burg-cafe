@@ -1,0 +1,42 @@
+.payment-section {
+  background-color: #f8f9fa00; /* Light background color */
+  padding: 20px; /* Padding around the section */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  text-align: center; /* Center-align text */
+  margin: 20px auto; /* Center the section on the page */
+  max-width: 600px; /* Limit the width of the section */
+}
+
+/* Headings with dark/light theme support */
+.payment-section h2 {
+  color: #333; /* Dark text color for light theme */
+  margin-bottom: 10px; /* Space below the heading */
+  font-size: 1.8rem; /* Larger font size */
+}
+
+/* Paragraphs with dark/light theme support */
+.payment-section p {
+  color: #666; /* Grey text color for light theme */
+  margin-bottom: 15px; /* Space below paragraphs */
+  font-size: 1.2rem; /* Larger font size */
+}
+
+/* Adjust styles for dark theme */
+.dark .payment-section h2 {
+  color: #f9f9f9; /* Light text color for dark theme */
+}
+
+.dark .payment-section p {
+  color: #ddd; /* Light grey text color for dark theme */
+}
+
+.qr-code-container {
+  margin: 20px 0; /* Space above and below the QR code */
+}
+
+.qr-code {
+  width: 200px; /* Width of the QR code */
+  height: 200px; /* Height of the QR code */
+  object-fit: contain; /* Maintain aspect ratio */
+}

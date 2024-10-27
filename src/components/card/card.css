@@ -1,0 +1,182 @@
+/* Container for the entire card */
+.futuristic-card {
+    perspective: 1000px;
+    width: 300px;
+    height: 400px;
+    margin: 100px;
+    margin-bottom: 100%;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.futuristic-card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Front side of the card */
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.card-front {
+    background: linear-gradient(135deg, #1f1c2c 0%, #928dab 100%);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    transition: transform 0.6s ease-out;
+}
+
+.card-front .card-image {
+    width: 80%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.card-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+}
+
+/* Back side of the card */
+.card-back {
+    background: linear-gradient(135deg, #141e30 0%, #243b55 100%);
+    color: white;
+    transform: rotateY(180deg);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-description {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #ccc;
+    text-align: center;
+}
+
+.card-price {
+    font-size: 1.4rem;
+    color: #ff6b6b;
+    font-weight: bold;
+}
+
+/* Glow effect */
+.futuristic-card:hover {
+    box-shadow: 0 0 20px 5px rgba(0, 255, 255, 0.6);
+}
+
+.futuristic-card:hover .card-front, 
+.futuristic-card:hover .card-back {
+    box-shadow: 0 0 20px 5px rgba(0, 255, 255, 0.6);
+}
+
+/* Small animations */
+.card-title, .card-description, .card-price {
+    animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px #ff6b6b, 0 0 10px #ff6b6b, 0 0 15px #ff6b6b;
+    }
+    to {
+        text-shadow: 0 0 15px #00ffff, 0 0 30px #00ffff, 0 0 45px #00ffff;
+    }
+}
+
+/* Original card hover effect */
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    width: 220px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.card-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover .card-image {
+    transform: rotate(360deg);
+}
+
+.card-title {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.card-description {
+    color: #aaa;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.card-price {
+    color: #00ff00;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.1));
+    z-index: 0;
+    animation: rotate-bg 10s linear infinite;
+}
+
+@keyframes rotate-bg {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.card * {
+    z-index: 1;
+}

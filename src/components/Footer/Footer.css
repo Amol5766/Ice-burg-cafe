@@ -1,0 +1,233 @@
+/* Reset margin and padding on body and html */
+html, body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #1e1e1e, #292b2c); /* Gradient background for a modern look */
+    color: #fff;
+    text-align: center;
+    padding: 10px 30px; /* Reduced padding from 30px to 10px */
+    position:static;
+    z-index: 100;
+    width: 100%;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.5);
+  }
+
+/* Light Theme */
+html.light, body.light {
+  background-color: #f0f0f0;
+  color: #000;
+}
+
+.footer.light-mode {
+  background-color: #fff; /* Light background for the footer */
+  color: #000; /* Dark text color for contrast */
+}
+
+/* Dark Theme */
+html.dark, body.dark {
+  background-color: #121212;
+  color: #fff;
+}
+
+.footer.dark-mode {
+  background-color: #1e1e1e; /* Dark footer background */
+  color: #fff; /* Light text color */
+}
+
+/* Apply this to toggle between light and dark mode */
+
+
+.footer {
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+
+  
+  /* Adjust content to ensure it's centered */
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Ensure the content spans the full width */
+    margin: 0 auto; /* Centering the content */
+  }
+  
+  /* Ensure full width of the footer */
+  .footer-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #00FFC6; /* Match the navbar logo color */
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+    display: inline-block;
+  }
+  
+  /* Footer Layout Adjustments */
+  .footer-top {
+    margin-bottom: 5px; /* Reduce margin to minimize height */
+  }
+  
+  .find-us-header {
+    font-size: 1.7rem;
+    font-weight:bold;
+    margin-bottom: 10px;
+    margin-top: 20px;
+  }
+  
+  .footer-text {
+    font-size: 1rem;
+    margin: 0;
+    color: #ffffff;
+  }
+  
+  .footer-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px; /* Reduce margin to minimize height */
+  }
+  
+  /* Social Media Icons */
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Adjust gap */
+    margin-top: 10px; /* Reduce margin for more compact layout */
+  }
+  
+  .social-icon {
+    font-size: 1.8rem; /* Adjusted font size */
+    color: #ffffff;
+    background: linear-gradient(145deg, #00bcd4, #ff4081); /* Gradient for icons */
+    border-radius: 50%;
+    margin-bottom: 20%;
+    font-size: 3rem;
+    padding: 10px; /* Adjusted padding */
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
+  }
+  
+  .social-icon:hover {
+    transform: translateY(-5px) rotateX(15deg) rotateY(15deg) scale(1.1); /* Hover animation */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);
+  }
+  
+  .social-link:hover {
+    box-shadow: 0px 6px 12px rgba(255, 64, 129, 0.4);
+  }
+  
+  .social-icon:active {
+    transform: scale(0.95); /* Slight shrink on click */
+  }
+  
+  /* Responsive Footer */
+  @media (max-width: 768px) {
+    .footer-content {
+      padding: 0 20px;
+    }
+  
+    .social-icons {
+      gap: 20px; /* Adjusted gap for smaller screens */
+
+    }
+  
+    .social-icon {
+      font-size: 2.8rem; /* Adjusted icon size for smaller screens */
+
+    }
+  }
+  
+  /* Logo Spinning Animation */
+  .logo-text {
+    font-size: 1.7rem;
+    font-weight: bolder;
+    font-family:cursive;
+    color: #00FFC6; /* Bright cyan for the logo */
+    margin-bottom: 5px;
+    margin-top: 10px;
+    transition: transform 0.6s ease-in-out; /* Add smooth transition */
+  }
+  
+  .logo-text:hover {
+    transform: rotate(360deg); /* Spin the logo on hover */
+  }
+
+  .footer-link {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .footer-link:hover {
+    text-decoration: underline;
+    
+  }
+  
+/* Styling for Vertical Columns */
+.footer-columns {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 20px;
+}
+
+.footer-column {
+  flex: 1;
+  padding: 0 20px;
+}
+
+.footer-column h4 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.footer-column p {
+  font-size: 1rem;
+  color: #cccccc;
+}
+.footer-row p {
+  margin: 10px 0; /* Adjust the margin value as needed */
+}
+.footer-row-1 {
+  margin-bottom: 1%;
+  margin-top: 4%;
+}
+
+.row-3 {
+  margin-bottom: -1%;
+  margin-top: -2%;
+}
+
+.footer-icon {
+  width: 100px; /* Adjust size as necessary */
+  height: 100px; /* Maintain aspect ratio */
+  margin-bottom: 0px; /* Space between icon and logo text */
+  display: block; /* Ensure it behaves as a block element */
+  margin-left: auto; /* Center align horizontally */
+  margin-right: auto; /* Center align horizontally */
+  border-radius: 50%;
+  position: absolute;
+}
+
+.circle-border {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px; /* Set a width for the border circle */
+  height: 120px; /* Set a height for the border circle */
+  border: 4px solid #ff4081; /* Adjust the color and thickness of the border */
+  border-radius: 50%; /* Makes it circular */
+  margin-bottom: -5px; /* Adjust space between icon and logo text */
+  background-color: rgba(255, 255, 255, 0.1); /* Optional: add a slight background */
+}
+
+

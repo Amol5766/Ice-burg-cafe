@@ -1,0 +1,434 @@
+
+
+.hero-video-container-home {
+    position: relative;
+    margin-top: 1%;
+    margin-bottom: 5%;
+    width: 110%;
+    margin-left: -5%;
+    height: 550PX; /* Adjust as needed */
+    overflow: hidden;
+
+}
+  
+.hero-video-container-home video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(70%);
+}
+  
+.hero-title-home {
+    margin: -3px auto;
+    position: absolute;
+    width:80% ;
+    top: 370px; /* Adjust position */
+    left: 285px; /* Adjust position */
+    transform: translate(-50%, -50%);
+    color: white; /* Adjust text color */
+    font-size: 3rem;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow for readability */
+    animation: glow 1.5s ease-in-out infinite alternate;
+}
+  
+  @keyframes glow {
+    from {
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+    to {
+      text-shadow: 2px 2px 20px #ffcc00;
+    }
+  }
+  
+/* Curved Arrow */
+.curved-arrow {
+    margin-top: -60px; /* Adjusted to position closer to the video */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .curved-arrow svg {
+    width: 100px;
+    height: 160px;
+    animation: bounce 2s infinite ease-in-out;
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  /* Juice Shop Section */
+  .juice-shop-container {
+    margin: -3px auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #ff7f50, #ff6347);
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(255, 99, 71, 0.5);
+    max-width: 370px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .juice-shop-container:hover {
+    transform: scale(1.05);
+  }
+  
+  .juice-shop-header {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .juice-shop-description {
+    font-size: 1.2rem;
+    color: #fff;
+    line-height: 1.6;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  }
+  
+/* Ice Cream Section */
+.ice-cream-container {
+    margin: -3px auto;
+    margin-top: -70px;
+    padding: 20px;
+    background: linear-gradient(135deg, #ffb6c1, #ff69b4);
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(255, 105, 180, 0.5);
+    max-width: 370px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .ice-cream-container:hover {
+    transform: scale(1.05);
+  }
+  
+  .ice-cream-header {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .ice-cream-description {
+    font-size: 1.2rem;
+    color: #fff;
+    line-height: 1.6;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Ice Cream Arrow Styling */
+  .ice-cream-arrow {
+    margin-top: -40px; /* Adjusted to position closer to the video */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+  }
+
+  /* Snacks Section */
+  .snacks-container {
+    margin: -3px auto;
+    margin-top: -70px;
+    margin-bottom: 8%;
+    padding: 20px;
+    background: linear-gradient(135deg, #1e90ff, #4682b4); /* Blue gradient */
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(70, 130, 180, 0.5); /* Adjusted shadow to match blue tones */
+    max-width: 370px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.snacks-container:hover {
+    transform: scale(1.05);
+}
+
+  
+  .snacks-header {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .snacks-description {
+    font-size: 1.2rem;
+    color: #fff;
+    line-height: 1.6;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Snacks Arrow Styling */
+  .snacks-arrow {
+    margin-top: -40px; /* Adjusted to position closer to the video */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+  }
+
+  /* Section Headers */
+.juice-shop-header, .ice-cream-header, .snacks-header {
+  font-size: 2.5rem;
+  font-family: 'Orbitron', sans-serif;
+  color: white;
+  margin-bottom: 15px;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+}
+
+/* Testimonials Section */
+.testimonials-container {
+  padding: 50px;
+  background: linear-gradient(135deg, #222222d4, #1111115b);
+  color: #fff;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.6);
+}
+
+.testimonials-header {
+  font-size: 3rem;
+  margin-bottom: 40px;
+  text-shadow: 0 0 15px rgba(0, 255, 255, 1);
+}
+
+.testimonials {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.testimonial-item {
+  width: 30%;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+  display: flex; /* Align items in a row */
+  align-items: center; /* Center items vertically */
+  margin: 20px 0; /* Space between testimonials */
+}
+
+.testimonial-avatar {
+  width: 80px; /* Adjust size as needed */
+  height: 80px; /* Maintain aspect ratio */
+  border-radius: 50%; /* Make it circular */
+  margin-right: 15px; /* Space between avatar and text */
+}
+
+
+.testimonial-item:hover {
+  transform: scale(1.05);
+}
+
+.testimonial-item p {
+  font-style: italic;
+}
+
+.testimonial-item span {
+  display: block;
+  margin-top: 150px;
+  
+  font-size: 1rem;
+  color: #00ffff;
+}
+
+/* Spotify Section */
+.spotify-section {
+  padding: 40px;
+  background: linear-gradient(135deg, #222222, #1111115b);
+  color: white;
+  text-align: center;
+  border-radius: 25px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.spotify-header {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 1);
+}
+
+.spotify-track {
+  font-size: 1.2rem;
+}
+
+.spotify-track a {
+  color: #00ffff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.spotify-track a:hover {
+  color: #ffffff;
+}
+
+/* General section padding */
+.juice-shop-container, .ice-cream-container, .snacks-container {
+  padding: 50px;
+  text-align: center;
+}
+
+.juice-shop-description, .ice-cream-description, .snacks-description {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-top: 15px;
+}
+
+.spotify-track {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Adjust the spacing between image and text */
+}
+
+.spotify-album-art {
+  width: 150px;  /* Adjust size as needed */
+  height: 150px;
+  border-radius: 8px; /* Optional: Add rounded corners */
+}
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+   .ice-cream-container, .snacks-container {
+      max-width: 100%; /* Make containers full width on smaller screens */
+      margin: 5px 0; /* Add margin for spacing */
+      margin-bottom: -10%;
+      margin-top: -17%;
+  }
+
+  .juice-shop-container {
+    max-width: 100%; /* Make containers full width on smaller screens */
+    margin: 5px 0; /* Add margin for spacing */
+    margin-bottom: -10%;
+    margin-top: -10%;
+
+  }
+  
+  .hero-title-home {
+      font-size: 2rem; /* Reduce font size for smaller screens */
+  }
+
+  .testimonials-container {
+      padding: 20px; /* Reduce padding for smaller screens */
+  }
+
+  .testimonials {
+      flex-direction: column; /* Stack testimonials on smaller screens */
+  }
+
+  .testimonial-item {
+      width: 90%; /* Full width for smaller screens */
+      margin: 10px auto; /* Center testimonials */
+  }
+
+  .spotify-section {
+      padding: 20px; /* Reduce padding for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title-home {
+      font-size: 3.5rem; /* Further reduce font size for very small screens */
+      width: 0.2rem;
+      left: 2rem;
+  }
+
+  .juice-shop-header, .ice-cream-header, .snacks-header {
+      font-size: 2rem; /* Further reduce section header sizes */
+  }
+
+  .testimonial-item {
+      font-size: 1rem; /* Adjust font size for testimonials */
+  }
+}
+
+
+
+/* Spotify Section Styling */
+.spotify-section {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.spotify-track {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.spotify-track-image {
+  width: 250px;
+  height: 250px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+
+.spotify-track-title, 
+.spotify-artist-name {
+  margin: 5px 0;
+  font-size: 1.2em;
+}
+
+.spotify-link {
+  margin-top: 10px;
+  font-size: 1em;
+  color: #1DB954;
+  text-decoration: none;
+}
+
+.spotify-link:hover {
+  text-decoration: underline;
+}
+
+/* Home.css */
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .spotify-track-image {
+    width: 200px;
+    height: 200px;
+  }
+
+  .spotify-track-title, 
+  .spotify-artist-name {
+    font-size: 1em;
+  }
+
+  .spotify-link {
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 480px) {
+  .spotify-track-image {
+    width: 150px;
+    height: 150px;
+  }
+
+  .spotify-track-title, 
+  .spotify-artist-name {
+    font-size: 0.9em;
+    margin-top: -3%;
+  }
+
+  .spotify-link {
+    font-size: 1.8em;
+    margin-top: -3%;
+  }
+}
